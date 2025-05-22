@@ -1207,7 +1207,6 @@ PRODUCT_PACKAGES += \
     libgf_ud_hal_20813_G3_oplus \
     liboemcrypto \
     libormshalclient \
-    libstdc++ \
     libvl53l1_daemon \
     libwvhidl \
     libwvdrmengine \
