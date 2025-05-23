@@ -15,6 +15,35 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "libCameraMDMHelper",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libCameraMDMHelper.so",
+            ],
+            shared_libs: [
+                "vendor.oplus.hardware.cameraMDM@1.0",
+                "libbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
     name: "btaudio_offload_if",
     owner: "oneplus",
     strip: {
@@ -19624,6 +19653,25 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsnpe_dsp_v66_domains_v2_skel",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libsnpe_dsp_v66_domains_v2_skel.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwfdnative",
     owner: "oneplus",
     strip: {
@@ -23738,6 +23786,12 @@ cc_prebuilt_binary {
 }
 
 install_symlink {
+    name: "system_priv-app_OnePlusCameraService_lib_arm64_libCameraMDMHelper_so",
+    installed_location: "priv-app/OnePlusCameraService/lib/arm64/libCameraMDMHelper.so",
+    symlink_target: "/system/lib64/libCameraMDMHelper.so",
+}
+
+install_symlink {
     name: "system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so",
     system_ext_specific: true,
     installed_location: "priv-app/ims/lib/arm64/libimscamera_jni.so",
@@ -23749,6 +23803,13 @@ install_symlink {
     system_ext_specific: true,
     installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
     symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_OnePlusCamera_lib_arm64_libsnpe_dsp_v66_domains_v2_skel_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/OnePlusCamera/lib/arm64/libsnpe_dsp_v66_domains_v2_skel.so",
+    symlink_target: "/system_ext/lib64/libsnpe_dsp_v66_domains_v2_skel.so",
 }
 
 install_symlink {

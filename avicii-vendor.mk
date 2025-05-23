@@ -559,6 +559,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/avicii/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    libCameraMDMHelper \
     btaudio_offload_if \
     eglSubDriverAndroid \
     libEGL_adreno \
@@ -1176,6 +1177,7 @@ PRODUCT_PACKAGES += \
     libimscamera_jni \
     libimsmedia_jni \
     libsingle_camera_bokeh_native \
+    libsnpe_dsp_v66_domains_v2_skel \
     libwfdnative \
     vendor.qti.hardware.dpmservice@1.0 \
     vendor.qti.imsrtpservice@3.0_vendor \
@@ -1334,8 +1336,10 @@ PRODUCT_PACKAGES += \
     vl53l1_daemon_main
 
 PRODUCT_PACKAGES += \
+    system_priv-app_OnePlusCameraService_lib_arm64_libCameraMDMHelper_so \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
     system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so \
+    system_ext_priv-app_OnePlusCamera_lib_arm64_libsnpe_dsp_v66_domains_v2_skel_so \
     system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so \
     odm_etc_acdbdata_adsp_avs_config_acdb \
     vendor_lib_libEGL_adreno_so \
