@@ -19635,6 +19635,8 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libwfdnative.so",
             ],
             shared_libs: [
+                "libbinder_shim",
+                "libinput_shim",
                 "libandroid_runtime",
                 "libui",
                 "libinput",
