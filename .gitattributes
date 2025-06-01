@@ -1,0 +1,2 @@
+radio/*.img filter=lfs diff=lfs merge=lfs -text
+proprietary/vendor/lib64/*.so filter=lfs diff=lfs merge=lfs -text
