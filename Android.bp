@@ -17939,7 +17939,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libsnpe_dsp_v66_domains_v2_skel",
+    name: "libsnpe_dsp_v66_domains_v2_skel_adsp",
     filename: "libsnpe_dsp_v66_domains_v2_skel.so",
     owner: "oneplus",
     src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so",
